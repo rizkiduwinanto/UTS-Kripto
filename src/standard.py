@@ -62,9 +62,10 @@ class Standard:
 
   def transform(self, half_block, key):
     temp = [half_block]
+    random.seed(key)
     for bytes_key in key:
       count = bit_operation.get_bits(bytes_key, 4, 0)
-      token = bit_operation.get_bits(bytes_key, 4, 4)
+      token = bit_operation.get_bits(bytes_key, 4, random.randint(0, 15))
       count = -count if token < 8 else count
       temp = self.rotate_left(half_block, count) if token < 8 else self.rotate_right(half_block, count)
       for i in range(abs(count)):
