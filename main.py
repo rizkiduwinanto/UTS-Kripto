@@ -11,8 +11,8 @@ def write_file(output_path, extension, file_byte):
     file.write(file_byte)
 
 if __name__ == "__main__":
-  key = b'jokowipki2019komunischina17april'
-  init_vector = b'prabowoanjingkafir2019jnganpilih'
+  key = b'rizkiduwinantolulusjuli2019hehe'
+  init_vector = b'rizkiduwinantolulusjuli2019hehe'
   filename = 'data/test.txt'
   name, extension = filename.split('.')
 
